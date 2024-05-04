@@ -1,10 +1,19 @@
 import React from "react";
 
 const Video = () => {
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    console.log(formData);
+    try {
+      const response = await fetch("/FrontPage", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

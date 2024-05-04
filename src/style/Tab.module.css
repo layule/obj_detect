@@ -28,6 +28,9 @@
   display: block;
   text-align: center;
   color: #333;
+}
+
+label {
   cursor: pointer;
 }
 
@@ -57,6 +60,9 @@
   top: calc(100% + 48px);
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box img {

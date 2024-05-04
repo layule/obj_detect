@@ -2,7 +2,7 @@ import "./App.css";
 import "./style/reset.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Tab from "./components/Tab";
+import Tab from "./pages/Tab";
 import MySwiper from "./components/MySwiper";
 
 function App() {
@@ -10,7 +10,6 @@ function App() {
     <div className="page-container">
       <Header />
       <MySwiper />
-      <Tab />
       <Footer />
     </div>
   );

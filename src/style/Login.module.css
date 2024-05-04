@@ -1,0 +1,50 @@
+.container {
+  width: 450px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 35px;
+}
+
+.form {
+  margin-bottom: 15px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.box {
+  width: 450px;
+}
+
+.box li + li::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  width: 1px;
+  height: 12px;
+  border-radius: 0.5px;
+  background-color: #333;
+}
