@@ -1,0 +1,49 @@
+.inner {
+  width: 100%;
+  height: calc(80px - 1px);
+  border-bottom: 1px solid #ebebeb;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.inner:hover {
+  position: fixed;
+  top: 0;
+}
+
+.inner a {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.menu {
+  width: 620px;
+  height: calc(80px - 1px);
+  display: flex;
+  align-items: center;
+  transform: translateX(25px);
+}
+
+.menu li {
+  padding: 4px;
+  margin-right: 1.3vw;
+}
+
+.icon {
+  width: 150px;
+  height: calc(80px - 1px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transform: translateX(-5px);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.icon li {
+  padding: 4px;
+  margin-right: 1.3vw;
+}
