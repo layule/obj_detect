@@ -33,18 +33,3 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
-.box {
-  width: 450px;
-}
-
-.box li + li::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 12px;
-  width: 1px;
-  height: 12px;
-  border-radius: 0.5px;
-  background-color: #333;
-}
