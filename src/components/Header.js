@@ -9,25 +9,19 @@ const Header = () => {
         <nav>
           <ul className={style.menu}>
             <li>
-              <a href="#">Service</a>
+              <a href="#">Home</a>
             </li>
             <li>
               <a href="#">About Us</a>
             </li>
             <li>
-              <a href="#">Development</a>
-            </li>
-            <li>
-              <a href="#">News</a>
+              <a href="/Tab">Service</a>
             </li>
           </ul>
         </nav>
         <ul className={style.icon}>
           <li>
             <a href="#">Login</a>
-          </li>
-          <li>
-            <a href="#">Membership</a>
           </li>
         </ul>
       </div>
