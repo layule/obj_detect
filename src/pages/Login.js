@@ -1,28 +1,32 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom"; // 리액트 라우터의 useHistory 훅을 불러옵니다.
-import "../style/reset.css";
-import style from "../style/Login.module.css";
+import { useNavigate } from "react-router-dom"; // useHistory 대신 useNavigate 사용
+import style from "../style/login.module.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false); // 로딩 상태를 관리합니다.
-  const [error, setError] = useState(""); // 에러 메시지를 관리합니다.
-  const history = useHistory(); // useHistory 훅을 사용하여 페이지 이동을 관리합니다.
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const navigate = useNavigate(); // useHistory 대신 useNavigate 사용
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // 폼 제출 시 로딩 상태를 활성화합니다.
-
+    setLoading(true);
     try {
-      const response = await axios.post("http://127.0.0.1:5000/login", {
+      const { data = {} } = await axios.post("http://127.0.0.1:5000/login", {
         loginId: username,
         loginPW: password,
       });
 
-      setLoading(false);
-      history.push("/");
+      const { success = false } = data ?? {};
+
+      if (success) {
+        setLoading(false);
+        navigate("/"); // useHistory 대신 useNavigate 사용
+      } else {
+        throw Error("login failed.");
+      }
     } catch (error) {
       setLoading(false);
       console.error("로그인 실패:", error);

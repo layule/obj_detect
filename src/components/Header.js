@@ -1,32 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import style from "../style/header.module.css";
 import "../style/reset.css";
-import style from "../style/Header.module.css";
 
-const Header = () => {
+function Header(props) {
   return (
-    <div>
+    <>
       <div className={style.inner}>
         <nav>
           <ul className={style.menu}>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
+
             <li>
-              <a href="#">About Us</a>
+              <Link to="/About">About</Link>
             </li>
+
             <li>
-              <a href="#">Service</a>
+              <Link to="/Service">Service</Link>
             </li>
           </ul>
         </nav>
         <ul className={style.icon}>
           <li>
-            <a href="#">Login</a>
+            <Link to="/Login">Login</Link>
           </li>
         </ul>
       </div>
-    </div>
+    </>
   );
-};
+}
 
 export default Header;

@@ -1,16 +1,25 @@
-import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import "./style/reset.css";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
-import MySwiper from "./components/MySwiper";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import About from "./pages/About";
+import Service from "./pages/Service";
 
 function App() {
   return (
-    <div className="page-container">
-      <Header />
-      <MySwiper />
-      <Footer />
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" Component={Home}></Route>
+          <Route path="/About" Component={About}></Route>
+          <Route path="/Service" Component={Service}></Route>
+          <Route path="/Login" Component={Login}></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

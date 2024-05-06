@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "../style/reset.css";
-import style from "../style/Footer.module.css";
+import style from "../style/footer.module.css";
 
-const Footer = () => {
+function Footer(props) {
   const [text, setText] = useState("");
   const onChange = (e) => {
     setText(e.target.value);
@@ -152,6 +151,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

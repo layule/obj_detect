@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Webcam = () => {
+function Webcam(props) {
   const [data, setData] = useState("");
 
   useEffect(() => {
@@ -15,6 +15,6 @@ const Webcam = () => {
       <img src={data} alt="Webcam" />
     </section>
   );
-};
+}
 
 export default Webcam;

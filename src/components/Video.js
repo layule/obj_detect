@@ -1,6 +1,6 @@
 import React from "react";
 
-const Video = () => {
+function Video(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -24,6 +24,7 @@ const Video = () => {
         boderRadius: "35px",
         objectFit: "contain",
         margin: "40px",
+        background: "black",
       }}
     >
       <form
@@ -44,6 +45,6 @@ const Video = () => {
       </form>
     </div>
   );
-};
+}
 
 export default Video;

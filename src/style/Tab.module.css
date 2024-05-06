@@ -1,7 +1,6 @@
 .container {
   position: relative;
   width: 100%;
-  margin-bottom: 45vw;
   border-bottom: 1px solid #ebebeb;
   border-top: 1px solid #ebebeb;
   font-size: 12px;
@@ -55,11 +54,7 @@ label {
 
 .box {
   width: 80%;
-  height: 100%;
-  position: absolute;
-  top: calc(100% + 48px);
-  left: 50%;
-  transform: translateX(-50%);
+  height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
