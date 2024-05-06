@@ -1,14 +1,17 @@
 import React from "react";
+import axios from "axios";
+import classes from "../style/video.module.scss";
 
 function Video(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     try {
-      const response = await fetch("/FrontPage", {
-        method: "POST",
-        body: formData,
-      });
+      console.log("formData", formData);
+      const response = await axios.post(
+        "http://127.0.0.1:5001/FrontPage",
+        formData
+      );
       const data = await response.json();
       console.log(data);
     } catch (error) {
@@ -17,16 +20,7 @@ function Video(props) {
   };
 
   return (
-    <div
-      style={{
-        width: "900px",
-        height: "600px",
-        boderRadius: "35px",
-        objectFit: "contain",
-        margin: "40px",
-        background: "black",
-      }}
-    >
+    <div className={classes.video}>
       <form
         method="POST"
         encType="multipart/form-data"
