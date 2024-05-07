@@ -1,7 +1,8 @@
 import { useState } from "react";
-import style from "../style/footer.module.css";
+import classes from "../style/footer.module.scss";
+import { Link } from "react-router-dom";
 
-function Footer(props) {
+const Footer = () => {
   const [text, setText] = useState("");
   const onChange = (e) => {
     setText(e.target.value);
@@ -11,10 +12,10 @@ function Footer(props) {
     setText("");
   };
   return (
-    <footer className={style.container}>
+    <footer className={classes.container}>
       <div style={{ paddingTop: "12px" }}>
         <h3 style={{ color: "#ebebeb" }}>Communications</h3>
-        <div className={style.block}></div>
+        <div className={classes.block}></div>
         <div style={{ padding: "10px 0 0 16px" }}></div>
         <div>
           <p
@@ -26,29 +27,29 @@ function Footer(props) {
             Subscribe to our emails to receive news about products, services,
             how-tos, and more.
           </p>
-          <div className={style.box}>
+          <div className={classes.box}>
             <input type="checkbox" />
             <p>I am at least 14 years old (required)</p>
           </div>
-          <div className={style.box}>
+          <div className={classes.box}>
             <input type="checkbox" />
             <p>
               I agree to the collection and use of personal information
               (required)
             </p>
           </div>
-          <div className={style.box_text}>
+          <div className={classes.box_text}>
             We will email you information about products, services and
             promotions for marketing purposes until you withdraw your consent.
             You do not need to consent to the collection and use of your
             personal information for marketing purposes, in which case you will
             not receive marketing information.
           </div>
-          <div className={style.box}>
+          <div className={classes.box}>
             <input type="checkbox" />
             <p>I agree to receive marketing information (required)</p>
           </div>
-          <div className={style.box_letter}>
+          <div className={classes.box_letter}>
             <input onChange={onChange} value={text} />
             <button onClick={onReset}>click</button>
           </div>
@@ -58,79 +59,79 @@ function Footer(props) {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          paddingBottom: "80px",
+          paddingBottom: "60px",
         }}
       >
-        <div className={style.grop}>
+        <div className={classes.grop}>
           <h3>Service</h3>
-          <div className={style.block}></div>
-          <nav className={style.gropText}>
+          <div className={classes.block}></div>
+          <nav className={classes.gropText}>
             <ul>
               <li>
-                <a href="#">Contact</a>
+                <Link top="/">Contact</Link>
               </li>
               <li>
-                <a href="#">FAQ</a>
+                <Link to="/">FAQ</Link>
               </li>
               <li>
-                <a href="#">Usage History</a>
+                <Link to="/">Usage History</Link>
               </li>
               <li>
-                <a href="#">Terms of Use</a>
+                <Link to="/">Terms of Use</Link>
               </li>
             </ul>
           </nav>
         </div>
-        <div className={style.grop}>
+        <div className={classes.grop}>
           <h3>Inquiry</h3>
-          <div className={style.block}></div>
-          <nav className={style.gropText}>
+          <div className={classes.block}></div>
+          <nav className={classes.gropText}>
             <ul>
               <li>
-                <a href="#">Corporate Purchase</a>
+                <Link to="/">Corporate Purchase</Link>
               </li>
               <li>
-                <a href="#">Chat Consultation</a>
+                <Link to="/">Chat Consultation</Link>
               </li>
             </ul>
           </nav>
         </div>
-        <div className={style.grop}>
+        <div className={classes.grop}>
           <h3>Introduction</h3>
-          <div className={style.block}></div>
-          <nav className={style.gropText}>
+          <div className={classes.block}></div>
+          <nav className={classes.gropText}>
             <ul>
               <li>
-                <a href="#">Brand story</a>
+                <Link to="/">Brand story</Link>
               </li>
               <li>
-                <a href="#">Privacy policy</a>
+                <Link to="/">Privacy policy</Link>
               </li>
               <li>
-                <a href="#">Operation/management policy</a>
+                <Link to="/">Operation/management policy</Link>
               </li>
               <li>
-                <a href="#">Activation</a>
+                <Link to="/">Activation</Link>
               </li>
               <li>
-                <a href="#">Cookie Policy</a>
+                <Link to="/">Cookie Policy</Link>
               </li>
             </ul>
           </nav>
         </div>
-        <div className={style.grop}>
+        <div className={classes.grop}>
           <h3>Social</h3>
-          <div className={style.block}></div>
-          <nav className={style.gropText}>
+          <div className={classes.block}></div>
+          <nav className={classes.gropText}>
             <ul>
               <li>
-                <a href="#">Instagram</a>
+                <Link to="/">Instagram</Link>
               </li>
               <li>
-                <a href="#">YouTube</a>
+                <Link to="/">YouTube</Link>
               </li>
               <li>
-                <a href="#">Kakao Plus Friend</a>
+                <Link to="/">Kakao Plus Friend</Link>
               </li>
             </ul>
           </nav>
@@ -151,6 +152,6 @@ function Footer(props) {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

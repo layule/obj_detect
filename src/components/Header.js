@@ -1,28 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import style from "../style/header.module.css";
-import "../style/reset.css";
+import classes from "../style/header.module.scss";
+import "../style/reset.scss";
 
-function Header(props) {
+const Header = () => {
   return (
     <>
-      <div className={style.inner}>
+      <div className={classes.inner}>
         <nav>
-          <ul className={style.menu}>
+          <ul className={classes.menu}>
             <li>
-              <Link to="/Login">Home</Link>
+              <Link to="/">Home</Link>
             </li>
-            {/* 
             <li>
               <Link to="/About">About</Link>
-            </li> */}
-
+            </li>
             <li>
               <Link to="/Service">Service</Link>
             </li>
           </ul>
         </nav>
-        <ul className={style.icon}>
+        <ul className={classes.icon}>
           <li>
             <Link to="/Login">Login</Link>
           </li>
@@ -30,6 +28,6 @@ function Header(props) {
       </div>
     </>
   );
-}
+};
 
 export default Header;

@@ -1,39 +1,29 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "../style/home.module.css";
+import classes from "../style/home.module.scss";
 
-function Home(props) {
+const Home = () => {
   return (
     <>
-      <section
-        style={{
-          width: "100%",
-          height: "100vh",
-        }}
-      >
+      <div className={classes.container}>
         <Swiper
+          className="swiper-slide"
           spaceBetween={0}
           slidesPerView={1}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
-            <div className="bg1"></div>
+            <div className={classes.bg1}>1</div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg2"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg3"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg4"></div>
+            <div className={classes.bg2}>2</div>
           </SwiperSlide>
         </Swiper>
-      </section>
+      </div>
     </>
   );
-}
+};
 
 export default Home;

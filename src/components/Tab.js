@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "../style/tab.module.css";
+import classes from "../style/tab.module.scss";
 import Video from "./Video";
 import Webcam from "./Webcam";
 
@@ -7,9 +7,9 @@ function Tab(props) {
   const [activeTab, setActiveTab] = useState(1);
   return (
     <>
-      <div className={style.container}>
+      <div className={classes.container}>
         <div>
-          <input className={style.text} type="radio" id="tap1" />
+          <input className={classes.text} type="radio" id="tap1" />
           <label
             className="tap1"
             htmlFor="tap1"
@@ -19,7 +19,7 @@ function Tab(props) {
           </label>
         </div>
         <div>
-          <input className={style.text} type="radio" id="tap2" />
+          <input className={classes.text} type="radio" id="tap2" />
           <label
             className="tap2"
             htmlFor="tap2"
@@ -29,7 +29,7 @@ function Tab(props) {
           </label>
         </div>
       </div>
-      <div className={style.box}>
+      <div className={classes.box}>
         {activeTab === 1 ? <Video /> : activeTab === 2 && <Webcam />}
       </div>
     </>
