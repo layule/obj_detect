@@ -9,12 +9,7 @@ function Tab(props) {
     <>
       <div className={style.container}>
         <div>
-          <input
-            className={style.text}
-            type="radio"
-            name={style.name}
-            id="tap1"
-          />
+          <input className={style.text} type="radio" id="tap1" />
           <label
             className="tap1"
             htmlFor="tap1"
@@ -24,12 +19,7 @@ function Tab(props) {
           </label>
         </div>
         <div>
-          <input
-            className={style.text}
-            type="radio"
-            name={style.name}
-            id="tap2"
-          />
+          <input className={style.text} type="radio" id="tap2" />
           <label
             className="tap2"
             htmlFor="tap2"

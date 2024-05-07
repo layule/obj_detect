@@ -10,12 +10,12 @@ function Header(props) {
         <nav>
           <ul className={style.menu}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/Login">Home</Link>
             </li>
-
+            {/* 
             <li>
               <Link to="/About">About</Link>
-            </li>
+            </li> */}
 
             <li>
               <Link to="/Service">Service</Link>

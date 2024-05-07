@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import classes from "../style/webcam.module.scss";
 // import axios from "axios";
 
 function Webcam(props) {
@@ -11,9 +12,11 @@ function Webcam(props) {
   }, []);
 
   return (
-    <section className="col-sm">
-      <img src={data} alt="Webcam" />
-    </section>
+    <>
+      {" "}
+      {/* <img src={data} alt="Webcam" /> */}
+      <div className={classes.bg}></div>
+    </>
   );
 }
 

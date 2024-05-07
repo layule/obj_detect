@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // useHistory 대신 useNavigate 사용
+import { useNavigate } from "react-router-dom";
 import style from "../style/login.module.css";
 
 const Login = () => {
@@ -8,7 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const navigate = useNavigate(); // useHistory 대신 useNavigate 사용
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,7 +23,7 @@ const Login = () => {
 
       if (success) {
         setLoading(false);
-        navigate("/"); // useHistory 대신 useNavigate 사용
+        navigate("/");
       } else {
         throw Error("login failed.");
       }

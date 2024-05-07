@@ -20,24 +20,40 @@ function Video(props) {
   };
 
   return (
-    <div className={classes.video}>
-      <form
-        method="POST"
-        encType="multipart/form-data"
-        style={{ alignContent: "center", textAlign: "center", display: "flex" }}
-        onSubmit={handleSubmit}
-      >
-        <input type="hidden" name="csrf_token" value="some_csrf_token_value" />
+    <>
+      <div className={classes.bg}></div>
+      <div className={classes.video}>
+        <form
+          method="POST"
+          encType="multipart/form-data"
+          style={{
+            alignContent: "center",
+            textAlign: "center",
+            display: "flex",
+          }}
+          onSubmit={handleSubmit}
+        >
+          <input
+            type="hidden"
+            name="csrf_token"
+            value="some_csrf_token_value"
+          />
 
-        <input type="file" name="file" className="custom-file-input" />
+          <input type="file" name="file" className="custom-file-input" />
 
-        <div>
-          <button type="submit" name="favorite" value="x" className="btnCustom">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
+          <div>
+            <button
+              type="submit"
+              name="favorite"
+              value="x"
+              className="btnCustom"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }
 
